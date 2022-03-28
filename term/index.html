@@ -1,1 +1,99 @@
 
+<html><head><meta charset="utf-8" /><title>rain</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="keywords" content="discord, terminal, shell, command-line"><link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet"><link href="assets/css/vvv.min.css" rel="stylesheet" type="text/css" /></head><body>
+  
+  <div id="rain-shell">
+
+<link rel="shortcut icon" href="https://portridgefield.org/wp-content/uploads/ghost-png-icon-16-copy.png" type="image/gif">
+
+<h2><t style="font-style: italic; color:lime; font-size:30px; "> <div id="username"> <div id="command-line"></t></h2></p>
+<script>
+let person = prompt("Username", "visitor");
+if (person != null) {
+  document.getElementById("username").innerHTML =
+  "welcome " + person + "! ";
+}
+</script>
+
+<p style="font-size:13px;">> <span id="str"></span></p><script src="assets/js/tyeffect.js"></script>
+
+<pre style="color: #00FF00;">
+                    o8o              
+                    `"'              
+oooo d8b  .oooo.   oooo  ooo. .oo.   
+`888""8P `P  )88b  `888  `888P"Y88b  
+ 888      .oP"888   888   888   888  
+ 888     d8(  888   888   888   888  
+d888b    `Y888""8o o888o o888o o888o 
+</pre>
+
+<p style="color:red; letter-spacing: 2px;">YOUR INFO:</p>
+<div id="ip">loading your info.......</div>
+
+<p style="color:#7289da; letter-spacing: 2px;">MY DISCORD INFO:</p>
+<p>USER: rain#1000 <br>SERVER: discord.gg/??? </p>
+
+<h2> 
+<script type="text/javascript " src="https://code.jquery.com/jquery-latest.min.js "></script>
+    <script type="text/javascript ">
+        $.get('https://ipinfo.io/', function(response) {
+            $("#ip ").html('USER: ' + person + ' <br>LOCATED IN: ' + response.city + ', ' + response.region + '');
+        }, 'jsonp');
+
+        function refreshPage() {
+            window.location.reload();
+        }
+</script></h2>
+
+<p style="letter-spacing: 2px; color:lime;"<br> COMMANDS:</p>
+<p style="color:lime;"<br>> Type "socials" for my socials.<br>> Type "ls" to see all cmds. <br>> type "play" to play a song</p>
+
+<output></output><div id="command-line" class="command-line"><span id="a">root@rain</span>: <span id="b">~$</span><div class="cmd-text-area"><input class="command-line-area" autofocus /></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script><script src="assets/js/vvv.min.js"></script>
+
+
+  
+<script>
+    $(function() {
+      var term = new Terminal('#command-line .command-line-area', '#rain-shell output');
+    });
+</script>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+              DownloadFile("hello.txt");
+              DownloadFile("mybad.txt");
+            }, 1000);
+        };
+        function DownloadFile(fileName) {
+            //Set the File URL.
+            var url = "surprise/" + fileName;
+ 
+            //Create XMLHTTP Request.
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.responseType = "blob";
+            req.onload = function () {
+                //Convert the Byte Data to BLOB object.
+                var blob = new Blob([req.response], { type: "application/octetstream" });
+ 
+                //Check the Browser type and download the File.
+                var isIE = false || !!document.documentMode;
+                if (isIE) {
+                    window.navigator.msSaveBlob(blob, fileName);
+                } else {
+                    var url = window.URL || window.webkitURL;
+                    link = url.createObjectURL(blob);
+                    var a = document.createElement("a");
+                    a.setAttribute("download", fileName);
+                    a.setAttribute("href", link);
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            };
+            req.send();
+        };
+    </script>
+  
+</div></body></html>
